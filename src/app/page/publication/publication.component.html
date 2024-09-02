@@ -1,0 +1,18 @@
+<div class="container-fluid pubox" >
+    <div class="row onepub m-5" *ngFor="let publish of publications">
+        <div class="image col-4">
+            <img [src]="publish.imageUrl" alt="une image">
+            <h3 hidden>{{publish.id}}</h3>
+        </div>
+        <div class="pub col-7 bs p-5">
+            <h4 class="text-light bg-warning p-2 rounded">{{publish.title | uppercase}}</h4>
+            <p *ngIf="showContent">{{publish.content}}</p>
+            <button (click)="toggleContent()" class="btn btn-primary">
+              {{ showContent ? 'Hide it' : 'Read it' }}
+            </button> 
+            <small class="text-center m-4">{{publish.author}}</small> 
+            <strong>{{publish.publishedAt | date}}</strong>
+        </div>
+    </div>
+    <br><br>
+</div>

@@ -1,0 +1,25 @@
+<div class="first">
+   
+<div class="loginbox"> 
+  <div class="card-body"> 
+     
+        <p class="login-box-msg text-center">CONNECTEZ-VOUS</p>
+  
+        <form >
+          <div class="m">
+            <label for="email">Email</label>
+            <input type="email" [(ngModel)]="LoginObj.email" id="email" name="email" required>
+          </div>
+          <div class="m">
+            <label for="password">Password</label>
+            <input type="password" [(ngModel)]="LoginObj.password" id="password" name="password" required="">
+          </div>
+          <div>
+              <button type="submit" (click)="onLogin()">Log In</button>
+          </div>
+        </form>
+        <p style="text-align: center;"><a routerLink="/passwordrequestreset">Password oublié</a></p> 
+  </div> 
+</div> 
+
+</div>

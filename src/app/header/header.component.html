@@ -1,0 +1,77 @@
+
+<div class="content-wrapper">
+    <header class="he">  
+        <div class="logo rounded-circle">
+            <img id="logos" class="rounded-circle" src="https://lh3.googleusercontent.com/a/ACg8ocJsEEFEVAemVjOn0RipvH_FjJbsxQEAgqfr6eAOXr6Hiu7fZuE=s288-c-no" alt="Logo">
+        </div>  
+         
+        <!-- navbar conf avec bootstrap start -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-none" [ngClass]="{'navbar-reduced': isNavbarReduced}" style="padding-left: 10px;"> 
+            <a class="navbar-brand" href="#">BWT</a>
+            <button class="navbar-toggler bg-warning" type="button" (click)="toggleNavbar()" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a (click)="toggleNavbarOnSmallScreens()" class="nav-link active" routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a (click)="toggleNavbarOnSmallScreens()" class="nav-link active" routerLink="/about" routerLinkActive="active">about</a>
+                </li>
+                <li class="nav-item">
+                  <a (click)="toggleNavbarOnSmallScreens()" class="nav-link active" routerLink="/contact" routerLinkActive="active">Contacts</a>
+                </li>
+                <li class="nav-item">
+                  <a (click)="toggleNavbarOnSmallScreens()" class="nav-link active" routerLink="/login" routerLinkActive="active">Sign in</a>
+                </li>
+                <li class="nav-item">
+                  <a (click)="toggleNavbarOnSmallScreens()" class="nav-link active" routerLink="/signup" routerLinkActive="active">Sign up</a>
+                </li> 
+                <li class="nav-item">
+                  <a (click)="toggleNavbarOnSmallScreens()" class="nav-link active" routerLink="/galerie" routerLinkActive="active">Galery</a>
+                </li> 
+               
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+
+                
+                <li class="dropdown-container mb-3"> 
+                  <div id="bout" class="dropdown" #dropdownMenu>
+                      <button class="btn nav-treeview btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Post
+                      </button>
+                      <div id="men" class="dropdown-menu" aria-labelledby="bout" style="position: absolute; max-height: 300px; overflow-y: auto;">
+                           <a (click)="toggleNavbarOnSmallScreens()" id="submenu" class="dropdown-item" routerLink="#" routerLinkActive="active">Create Post</a> 
+                           <a (click)="toggleNavbarOnSmallScreens()" id="submenu" class="dropdown-item" routerLink="/publication">See Posts</a> 
+                      </div>
+                  </div> 
+              </li>
+              <li hidden class="dropdown-container"> 
+                  <div class="dropdown" #dropdownMenu>
+                      <button class="btn nav-treeview btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-boundary="viewport" aria-expanded="false">
+                          <small>Advanced option</small>
+                      </button>
+                      <div class="dropdown-menu boxdrop opacity-90 column-flex" aria-labelledby="dropdownMenuButton" style="position: absolute; max-height: 300px; overflow-y: auto;">
+                           <a (click)="toggleNavbarOnSmallScreens()" id="submenu" class="dropdown-item" routerLink="/addpicture">Add picture</a> 
+                           <a (click)="toggleNavbarOnSmallScreens()" id="submenu" class="dropdown-item" routerLink="/mypictures">My pictures</a> 
+                           <a (click)="toggleNavbarOnSmallScreens()" id="submenu" class="dropdown-item" routerLink="/win">Gagner</a> 
+                           <a (click)="toggleNavbarOnSmallScreens()" id="submenu" class="dropdown-item" routerLink="/blog">Nos blogs</a>  
+                      </div>
+                  </div>  
+              </li> 
+              
+                <li class="nav-item">
+                  <a (click)="toggleNavbar()" class="nav-link text-danger" routerLink="/logout"><small style="text-transform: capitalize;">Logout</small></a>
+                </li>
+ 
+            
+              </ul>
+            </div>
+          </nav>
+          
+    </header>
+</div>
+          

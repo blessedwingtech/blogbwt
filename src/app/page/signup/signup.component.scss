@@ -1,0 +1,106 @@
+.banner h1{
+    background-color: rgb(3, 53, 82);
+    color: orange;
+    text-align: center;
+    margin-top: 80px;
+    padding: 20px;
+}
+.banner p{
+    text-align: center;
+    color: gray;
+    margin: 20px;
+}
+.banner:hover{ 
+    width: 100%;
+	height: 260px;
+	background-image: linear-gradient(40deg, rgba(3, 53, 82, 0.7), rgba(0, 0, 0, 0.7)), url('./../../../assets/images/stud1.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-top: 10px;
+	margin-bottom: 100px;
+	padding-top: 100px;
+    transition: 1s ease-in-out;
+    z-index: 100;
+}
+.focused {
+    margin-right: 15px;
+    width: 30% !important;
+    height: 100vh;
+    float: left;
+    background-image: linear-gradient(40deg, rgba(3, 53, 82, 0.7), rgba(0, 0, 0, 0.7)), url('./../../../assets/images/stud1.png');
+    background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+    border-radius: 20px;
+    box-shadow: 0 0 8px rgba(7, 7, 7, 0.774);
+    position: fixed;
+    left: 0;
+    top: 30px;
+    z-index: 10;
+    transition: 1s ease;
+    h1{
+        background-color: rgba(6, 1, 46, 0.527);
+        font-size: 15px;
+    }
+    p{
+        color: #fff;
+    }
+}
+
+
+.banner{
+    margin-top: 100px;
+    text-align: center;
+}
+.h{
+    color: orange;
+    text-align: center;
+    background-color: rgba(rgb(3, 53, 82), $alpha: 1);
+}
+.fm{
+    width: 60%; 
+    margin-left: 400px;
+    margin-top: 100px;
+    //margin: 5% 15%; 
+    box-shadow: 0 0 5px rgba(20, 20, 20, .5);
+}
+button{
+    margin: 10px 0;
+} 
+
+//=================
+@media screen and (max-width:800px) {
+    form{
+        margin: auto;
+    }
+    .row{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .fm{
+        margin: 100px auto;
+        width: 90% !important;
+        display: flex;
+        flex-direction: column;
+    }
+    #side{
+        width: 0;
+        display: none;
+        position: fixed;
+    }
+    .form-group{
+        margin-top: 5px;
+        width: 100%;
+    }
+    label{
+        color: rgb(3, 53, 82);
+        margin-left: 10px;
+        font-weight: bold;
+    }
+    .focused{
+        display: none;
+    }
+}

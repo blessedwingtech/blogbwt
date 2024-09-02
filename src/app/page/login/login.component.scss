@@ -1,0 +1,40 @@
+.loginbox{
+    width: 25%;
+    height: fit-content; 
+    margin: 15% 40%; 
+    padding: 20px;
+    box-shadow: 0 0 5px rgb(3, 53, 82);
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+form .m{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 5px;
+}
+input:hover{
+    background-color: rgba(10, 2, 80, 0.233);
+    transition: 1s ease;
+}
+button{
+    width: 90%;
+    margin: 8px 5%;
+    background-color: orange;
+    padding: 5px 0;
+    border-radius: 10px; 
+    cursor: pointer;
+}
+
+//=============
+@media screen and (max-width:900px) {
+    .loginbox{
+        width: 65%;
+        margin: auto;
+    }
+    .first{
+        margin-top: 100px;
+    }
+}

@@ -1,0 +1,53 @@
+ 
+<div class="contain">
+  <div class="container mt-5">
+    <h2>Contactez-nous</h2>
+    <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+      <div class="mb-3">
+        <label for="name" class="form-label">Nom</label>
+        <input type="text" class="form-control" id="name" name="name" ngModel required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" name="email" ngModel required>
+      </div>
+      <div class="mb-3">
+        <label for="country" class="form-label">Pays</label>
+        <select class="form-control" id="country" name="country" ngModel>
+          <option *ngFor="let country of countries" [value]="country">{{ country }}</option> 
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea class="form-control" id="message" name="message" rows="3" ngModel required></textarea>
+      </div>
+      <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+      <button type="submit" class="btn btn-primary col-12" [disabled]="contactForm.invalid">Envoyer</button>
+    </form>
+  </div>
+  
+
+  <div id="entre">
+    <p class="si">Nous sommes ouverts à toute suggestion et/ou discussion</p>
+      <div class="findme">
+        <div id="vi">
+            <img src="https://img.icons8.com/ios-glyphs/30/000000/home.png" alt="home">
+            <p>#99, Pylone, Mirebalais, Haïti</p>
+        </div>
+        <div id="vi">
+            <img src="https://img.icons8.com/ios-glyphs/30/000000/phone.png" alt="call">
+            <p>(+509) 40576045 / 48365101</p>
+        </div>
+        <div id="vi">
+            <img src="https://img.icons8.com/ios-glyphs/30/000000/email.png" alt="mail">
+            <p>adess&#64;gmail.com</p>
+        </div>
+        <div id="vi">
+            <img src="https://img.icons8.com/ios-glyphs/30/000000/internet.png" alt="web">
+            <p>www.adess.org</p>
+        </div>
+      </div>
+  
+  
+  </div>
+</div>

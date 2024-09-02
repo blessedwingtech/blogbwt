@@ -1,0 +1,15 @@
+.page{
+  padding: 100px 10px;
+}
+.container {
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0 0 28px rgba(128, 128, 128, 0.521);
+  }
+  
+  @media (max-width: 576px) {
+    .container {
+      padding: 15px;
+    }
+  }
+  

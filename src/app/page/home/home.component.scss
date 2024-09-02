@@ -1,0 +1,88 @@
+.video-background {
+  background-color: rgba(3, 53, 82, 0.6);
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; 
+}
+
+.video-background video {
+  background-color: rgba(155, 8, 8, 0.6);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1; /* Ensure the video is in the background */
+}
+
+/* Style the overlay content */
+.video-background .content {
+  position: relative;
+  z-index: 10;
+}
+
+h1 {
+  margin-top: 10%;
+  text-align: center; 
+  font-size: 5rem;
+  color: #fff;
+  border-bottom: solid 4px rgba(255, 166, 0, 0.596);
+  z-index: 20;
+}
+
+.box {
+  padding: 3%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.box1 { 
+  margin-top: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn1 {
+  background-color: orange;
+  color: rgb(3, 53, 82);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.btn1:hover {
+  background-color: rgb(3, 53, 82);
+  color: orange;
+}
+
+.text {
+  color: #fff;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Responsive design */
+@media screen and (max-width: 800px) {
+  .box {
+      width: 90%;
+  }
+  .box1 .box {
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+  }
+  .btn1 {
+      margin: 10px 5px;
+  }
+}

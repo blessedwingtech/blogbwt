@@ -1,0 +1,35 @@
+<div class="page">
+  <div class="container mt-5">
+    <h2 class="text-center">Faire un Don</h2>
+    <form (ngSubmit)="onSubmit()" #donationForm="ngForm">
+      <div class="mb-3">
+        <label for="name" class="form-label">Nom</label>
+        <input type="text" class="form-control" id="name" required [(ngModel)]="donation.name" name="name" #name="ngModel">
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" required [(ngModel)]="donation.email" name="email" #email="ngModel">
+      </div>
+      <div class="mb-3">
+        <label for="phone" class="form-label">Téléphone</label>
+        <input type="tel" class="form-control" id="phone" required [(ngModel)]="donation.phone" name="phone" #phone="ngModel">
+      </div>
+      <div class="mb-3">
+        <label for="amount" class="form-label">Montant</label>
+        <input type="number" class="form-control" id="amount" required [(ngModel)]="donation.amount" name="amount" #amount="ngModel">
+      </div>
+      <div class="mb-3">
+        <label for="transferMethod" class="form-label">Moyen de Transfert</label>
+        <select class="form-select" id="transferMethod" required [(ngModel)]="donation.transferMethod" name="transferMethod" #transferMethod="ngModel">
+          <option *ngFor="let method of transferMethods" [value]="method">{{ method }}</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Message (optionnel)</label>
+        <textarea class="form-control" id="message" [(ngModel)]="donation.message" name="message" #message="ngModel"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary" [disabled]="!donationForm.form.valid">Envoyer</button>
+    </form>
+  </div>
+  
+</div>

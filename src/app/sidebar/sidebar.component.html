@@ -1,0 +1,51 @@
+<!-- <button id="tog" class="btn btn-secondary" (click)="toggleSidebar()">toggle sidebar</button> -->
+
+<div class="mainly" *ngIf="sidebar.isSidebarVisible()"> 
+<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+  <li class="dropdown-container">
+    <div class="dropdown" #dropdownMenu>
+      <button class="btn nav-treeview btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-boundary="window" aria-expanded="false">
+        Ma page
+      </button>
+      <ul class="dropdown-menu boxdrop opacity-90 column-flex" aria-labelledby="dropdownMenuButton">
+        <li><a class="dropdown-item" routerLink="">Home</a></li>
+        <li><a class="dropdown-item" routerLink="/about">À propos</a></li>
+        <li><a class="dropdown-item" routerLink="/service">Nos services</a></li>
+        <li><a class="dropdown-item" routerLink="/blog">Nos blogs</a></li> 
+      </ul>
+    </div> 
+  </li>
+  <li class="dropdown-container">
+    <div class="dropdown" #dropdownMenu>
+      <button class="btn nav-treeview btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-boundary="window" aria-expanded="false">
+        Cours
+      </button>
+      <ul class="dropdown-menu boxdrop opacity-90 column-flex" aria-labelledby="dropdownMenuButton">
+        <li><a class="dropdown-item" routerLink="/enroll">S'inscrire</a></li>
+        <li><a class="dropdown-item" routerLink="/picsnaps">Mes Cours</a></li>
+        <li><a class="dropdown-item" routerLink="/loginuser">Tous les cours</a></li>
+        <li><a class="dropdown-item" routerLink="/loginuser">Ajouter cours</a></li>
+      </ul>
+    </div>
+  </li>
+  <li class="dropdown-container">
+    <div class="dropdown" #dropdownMenu>
+      <button class="btn nav-treeview btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-boundary="window" aria-expanded="false">
+        Bibliothèque d'images
+      </button>
+      <ul class="dropdown-menu boxdrop opacity-90 column-flex" aria-labelledby="dropdownMenuButton">
+        <li><a class="dropdown-item" routerLink="/create">Créer nouveau</a></li>
+        <li><a class="dropdown-item" routerLink="/picsnaps">Mes images</a></li>
+        <li><a class="dropdown-item" routerLink="/display">From server</a></li>
+        <li><a class="dropdown-item" routerLink="/loginuser">s'enregistrer</a></li>
+      </ul>
+    </div>
+  </li>
+</ul>
+
+    
+
+      
+      
+</div>
+  
