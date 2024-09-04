@@ -1,29 +1,54 @@
-footer{  
-	margin-top: 100px;
-	background-image: linear-gradient(145deg, rgba(255, 168, 6, 0.849), rgba(3, 53, 82, .7)), url('https://wallup.net/wp-content/uploads/2018/03/17/540089-programmers-AutoHotkey-code-programming-laptop-ThinkPad.jpg');
+.bg{  
+	margin-top: 10px;
+	background-image: linear-gradient(145deg, rgba(3, 3, 3, 0.849), rgba(3, 53, 82, .7)), url('https://wallup.net/wp-content/uploads/2018/03/17/540089-programmers-AutoHotkey-code-programming-laptop-ThinkPad.jpg');
 	background-attachment: fixed;
 	background-repeat: cover;
 	background-position: center;
-	padding-top: 80px;
-	padding-left: 70px;
-	padding-right: 70px;
-	padding-bottom: 30px;
-	color: #fff;
+	padding-top: 80px; 
+	color: #d3d0d0 !important;
 }
+.social{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+a{
+	color: #dbd8d8 !important;
+	list-style: none;
+}
+ .pim{
+	background-color: #fff;
+	margin: 7px;
+	box-shadow: 0 0 10px #03832300;
+}
+p .bg-light{
+	margin: 0 8px;
+	border-radius: 50%;
+}
+.style-none{
+	list-style: none;
+}
+/* 
 footer .pied{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
 }
 footer .pied div h2{
-	margin-bottom: 50px;
+	margin-bottom: 10px;
 	font-size: 18px;
 }
 
 footer .pied div{
-	width: 30%;
-	margin: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	width: fit-content; 
 	padding: 5px;
+	background-color: rgba(1, 68, 68, 0.404);
+	box-shadow: 0 0 10px rgba(128, 128, 128, 0.575);
 }
 footer .pied div h4{
 	font-size: 15px;
@@ -43,14 +68,14 @@ footer .pied div .tx{
 	line-height: 25px;
 }
 footer .pied .im{
-	width: 90%;
+	width: fit-content;
 	display: flex;
-	flex-direction: row;
-	border: none;
-	justify-content: space-evenly;
-	position: relative;
-	right: 40px;
-	top: -20px;
+	flex-direction: row; 
+	justify-content: space-evenly;  
+}
+
+a{
+	color: #fff;
 }
 footer .pied .im img{
 	width: 15%;
@@ -77,6 +102,12 @@ footer .end .nonm{
 
 //============responsive
 @media screen and (max-width:800px) {
+	footer{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
 	footer .pied{
 		display: flex;
 		flex-direction: column;
@@ -107,10 +138,8 @@ footer .end .nonm{
 	}
 	.end{
 		width: 100%;
-		text-align: center;
-		margin: 0;
-		padding: 10px;
+		text-align: center;  
 		background-color: blue($color: #040c3a18);
 		font-size: 13px;
 	}
-}
+} */

@@ -1,17 +1,33 @@
 <div class="container-fluid pubox" >
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <!-- <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button> -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav d-flex">
+                    <li class="nav-item"><a class="nav-link" routerLink="/win">Making money online</a></li>
+                    <li class="nav-item"><a class="nav-link" routerLink="/about">About BWT</a></li>
+                    <li class="nav-item"><a class="nav-link" routerLink="/home">Portefolio</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
     <div class="row onepub m-5" *ngFor="let publish of publications">
         <div class="image col-4">
             <img [src]="publish.imageUrl" alt="une image">
             <h3 hidden>{{publish.id}}</h3>
         </div>
         <div class="pub col-7 bs p-5">
-            <h4 class="text-light bg-warning p-2 rounded">{{publish.title | uppercase}}</h4>
+            <h4 class="text-light bg-secondary p-2 rounded">{{publish.title | uppercase}}</h4>
             <p *ngIf="showContent">{{publish.content}}</p>
-            <button (click)="toggleContent()" class="btn btn-primary">
-              {{ showContent ? 'Hide it' : 'Read it' }}
+            <button (click)="toggleContent()" class="btn text-primary m-3">
+              {{ showContent ? 'Cacher l\'article...' : 'Lire l\'article...' }}
             </button> 
-            <small class="text-center m-4">{{publish.author}}</small> 
-            <strong>{{publish.publishedAt | date}}</strong>
+            <p><small class="text-center m-4"> Author : {{publish.author}}</small> </p>
+            <p class="p-3" style="font-weight: lighter;">Published at : {{publish.publishedAt | date}}</p>
         </div>
     </div>
     <br><br>

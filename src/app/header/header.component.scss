@@ -77,6 +77,7 @@ ul{
 }
 a{
     color: #fff; 
+    margin: 5px 10px;
 }
 img{
     position: absolute;
@@ -141,6 +142,16 @@ button {
         position: fixed;  
         transition: all 1s ease;
         //opacity: 0;
+    }
+    #brand{
+       /*  position: fixed;
+        top: 10px;
+        left: 20px;
+        z-index: 50; */
+        font-weight: lighter;
+        background-color: none;
+        margin: none;
+        text-shadow: 0 0 10px rgba(65, 63, 63, 0.397);
     }
     .nav li{
         opacity: 0.5;

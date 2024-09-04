@@ -7,7 +7,7 @@
          
         <!-- navbar conf avec bootstrap start -->
         <nav class="navbar navbar-expand-lg navbar-light bg-none" [ngClass]="{'navbar-reduced': isNavbarReduced}" style="padding-left: 10px;"> 
-            <a class="navbar-brand" href="#">BWT</a>
+            <a id="brand" class="navbar-brand" href="#">Unistar</a>
             <button class="navbar-toggler bg-warning" type="button" (click)="toggleNavbar()" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -24,13 +24,16 @@
                   <a (click)="toggleNavbarOnSmallScreens()" class="nav-link active" routerLink="/contact" routerLinkActive="active">Contacts</a>
                 </li>
                 <li class="nav-item">
-                  <a (click)="toggleNavbarOnSmallScreens()" class="nav-link active" routerLink="/login" routerLinkActive="active">Sign in</a>
+                  <a (click)="toggleNavbarOnSmallScreens()" class="nav-link active" routerLink="/login" routerLinkActive="active" *ngIf="!secret()">Sign in</a>
                 </li>
                 <li class="nav-item">
-                  <a (click)="toggleNavbarOnSmallScreens()" class="nav-link active" routerLink="/signup" routerLinkActive="active">Sign up</a>
+                  <a (click)="toggleNavbarOnSmallScreens()" class="nav-link active" routerLink="/signup" routerLinkActive="active" *ngIf="!secret()">Sign up</a>
                 </li> 
                 <li class="nav-item">
-                  <a (click)="toggleNavbarOnSmallScreens()" class="nav-link active" routerLink="/galerie" routerLinkActive="active">Galery</a>
+                  <a (click)="toggleNavbarOnSmallScreens()" class="nav-link active" routerLink="/home" routerLinkActive="active" *ngIf="!secret()">Galery</a>
+                </li>
+                <li class="nav-item">
+                  <a (click)="toggleNavbarOnSmallScreens()" class="nav-link active" routerLink="/publication" routerLinkActive="active">Articles</a>
                 </li> 
                
                 <li class="nav-item">
@@ -38,7 +41,7 @@
                 </li>
 
                 
-                <li class="dropdown-container mb-3"> 
+                <li class="dropdown-container mb-3" *ngIf="!secret()"> 
                   <div id="bout" class="dropdown" #dropdownMenu>
                       <button class="btn nav-treeview btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                           Post
@@ -64,9 +67,8 @@
               </li> 
               
                 <li class="nav-item">
-                  <a (click)="toggleNavbar()" class="nav-link text-danger" routerLink="/logout"><small style="text-transform: capitalize;">Logout</small></a>
-                </li>
- 
+                  <a (click)="toggleNavbar()" class="nav-link text-danger" routerLink="/logout"><small style="text-transform: capitalize;" *ngIf="!secret()">Logout</small></a>
+                </li> 
             
               </ul>
             </div>

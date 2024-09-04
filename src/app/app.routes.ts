@@ -21,6 +21,7 @@ import { DonationFormComponent } from './page/donation-form/donation-form.compon
 import { GalerieComponent } from './page/galerie/galerie.component';
 import { ConfidentialiteComponent } from './page/confidentialite/confidentialite.component';
 import { InfoComponent } from './page/info/info.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 
 export const routes: Routes = [
@@ -45,12 +46,12 @@ export const routes: Routes = [
     {
         path: 'home',
         component: HomeComponent,
-        canActivate: [AuthGuard]
+        //canActivate: [AuthGuard]
     },
     {
         path: 'about',
         component: AboutComponent,
-        canActivate: [AuthGuard]
+        //canActivate: [AuthGuard]
     },
     {
         path: 'dashboard',
@@ -65,7 +66,7 @@ export const routes: Routes = [
     {
         path: 'contact',
         component: ContactComponent,
-        canActivate: [AuthGuard]
+        //canActivate: [AuthGuard]
     },
     {
         path: 'signup',
@@ -97,6 +98,10 @@ export const routes: Routes = [
     {
         path: 'galerie',
         component: GalerieComponent
+    },
+    {
+        path: 'gallery',
+        component: GalleryComponent
     },
      {
         path: 'confidentialite',
@@ -134,6 +139,6 @@ export const routes: Routes = [
         component: PublicationComponent
     },
     {
-        path: '**', redirectTo: 'login', pathMatch: 'full'
+        path: '**', redirectTo: 'home', pathMatch: 'full'
     },
 ];

@@ -1,6 +1,7 @@
 <div class="page">
+    <h2 class="text-center bg-light">Faire un Don</h2>
   <div class="container mt-5">
-    <h2 class="text-center">Faire un Don</h2>
+    <p style="font-weight: lighter; padding: 10px; text-align: center; margin-bottom: 18px; box-shadow: -1px 0 15px rgba(34, 2, 2, 0.342);">Remplissez les champs de ce formulaire, ainsi vous pouvez envoyer les coordonnées de votre don. Et BWT vous contactera grâce à votre email pour les suites nécessaires. <small>Merci pour votre soutien !</small></p>
     <form (ngSubmit)="onSubmit()" #donationForm="ngForm">
       <div class="mb-3">
         <label for="name" class="form-label">Nom</label>
@@ -28,7 +29,7 @@
         <label for="message" class="form-label">Message (optionnel)</label>
         <textarea class="form-control" id="message" [(ngModel)]="donation.message" name="message" #message="ngModel"></textarea>
       </div>
-      <button type="submit" class="btn btn-primary" [disabled]="!donationForm.form.valid">Envoyer</button>
+      <button type="submit" class="btn btn-primary col-12" [disabled]="!donationForm.form.valid">Envoyer</button>
     </form>
   </div>
   

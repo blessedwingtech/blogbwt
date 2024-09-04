@@ -50,7 +50,7 @@ export class DonationFormComponent {
         Swal.fire({
           icon: 'success',
           title: 'Succès',
-          text: 'Le message a été soumis avec succès! <br>Nous vous remercions de votre don... <br> Nous faisons les suivis au plus vite possible.',
+          text: `Le message a été soumis avec succès! <br>Nous vous remercions de votre don... <br> Nous faisons les suivis au plus vite possible.`,
           confirmButtonColor: '#3085d6'
         });
       },

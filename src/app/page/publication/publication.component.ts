@@ -2,11 +2,12 @@ import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PublicationService } from '../../services/publication.service';
 import { Publication } from '../../models/publication-model';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-publication',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './publication.component.html',
   styleUrls: ['./publication.component.scss']
 })

@@ -10,7 +10,8 @@ import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent { 
+export class HeaderComponent {  
+
   isNavbarCollapsed = true;
   isNavbarReduced =  false;
 
@@ -21,6 +22,9 @@ export class HeaderComponent {
 
   //======================== 
 
+  secret(){
+    return true;
+  }
   
 
   toggleNavbarOnSmallScreens() {
