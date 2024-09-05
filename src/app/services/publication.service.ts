@@ -7,10 +7,74 @@ import { Publication } from "../models/publication-model";
 })
 
 export class PublicationService{
-    publications: Publication[] = [
+    publications: Publication[] = [ 
+        {
+            imageUrl: 'https://th.bing.com/th/id/OIP.rj0AyMzZIJDUaRobfrwVkwHaHa?pid=ImgDet&w=191&h=191&c=7',
+            id: 1,
+            title: 'Télévisions Transparentes',
+            content: `LG a dévoilé un téléviseur OLED transparent de 77 pouces, offrant une expérience visuelle unique en se fondant dans le décor lorsqu’il est éteint.`,
+            author: 'Copilot',
+            publishedAt: new Date()
+        },
+        {
+            imageUrl: 'https://th.bing.com/th/id/OIP.uAkrSVxNrEscoNSzW9zjVAHaHa?pid=ImgDet&w=191&h=191&c=7',
+            id: 2,
+            title: 'Poussette Intelligente',
+            content: `La start-up canadienne Glüxkind a présenté “Ella”, une poussette connectée et intelligente, qui pourrait révolutionner la vie des parents.`,
+            author: 'Copilot',
+            publishedAt: new Date()
+        },
+        {
+            imageUrl: 'https://prefurredpetsmvp.com/wp-content/uploads/photo-gallery/MegLakePhoto_-24.jpg',
+            id: 3,
+            title: 'Appareil de Télémédecine',
+            content: `Withings a lancé BeamO, un appareil 4-en-1 (thermomètre, électrocardiogramme, stéthoscope, oxymètre) destiné à améliorer les téléconsultations médicales.`,
+            author: 'Copilot',
+            publishedAt: new Date()
+        },
+        {
+            imageUrl: 'https://blog.secur-cloud.fr/wp-content/uploads/2023/02/informatique-quantique-scaled.jpeg',
+            id: 4,
+            title: 'Internet Quantique Sécurisé',
+            content: `Cette technologie promet de révolutionner la sécurité des communications en utilisant les principes de la mécanique quantique pour créer des réseaux de communication inviolables.`,
+            author: 'Copilot',
+            publishedAt: new Date()
+        },
+        {
+            imageUrl: 'https://geneticliteracyproject.org/wp-content/uploads/2016/07/Screen-Shot-2016-07-18-at-7.43.41-AM.png',
+            id: 5,
+            title: 'Médecine Hyper-Personnalisée',
+            content: `Grâce à l'intelligence artificielle et aux données génomiques, les traitements médicaux peuvent être adaptés spécifiquement à chaque individu, améliorant ainsi l'efficacité des soins.`,
+            author: 'Copilot',
+            publishedAt: new Date()
+        },
+        {
+            imageUrl: 'https://media.gettyimages.com/photos/dexterous-robots-picture-id1209651239',
+            id: 6,
+            title: 'Robots Habiles',
+            content: `Des robots capables de manipuler des objets avec une dextérité humaine, ouvrant la voie à de nouvelles applications dans la fabrication et les services.`,
+            author: 'Copilot',
+            publishedAt: new Date()
+        },
+        {
+            imageUrl: 'https://www.universetoday.com/wp-content/uploads/2010/10/carbon_capture1.png',
+            id: 7,
+            title: 'Capture de Carbone',
+            content: `Des technologies qui capturent le dioxyde de carbone de l'atmosphère pour le transformer en biocarburant, contribuant ainsi à la lutte contre le changement climatique.`,
+            author: 'Copilot',
+            publishedAt: new Date()
+        },
+        {
+            imageUrl: 'https://www.mapatisserie.net/wp-content/uploads/2022/01/boulettes-de-viande-sans-viande.jpg',
+            id: 8,
+            title: 'Viande Sans Viande',
+            content: `Des alternatives à la viande traditionnelle, fabriquées à partir de protéines végétales ou cultivées en laboratoire, offrant des options alimentaires plus durables.`,
+            author: 'Copilot',
+            publishedAt: new Date()
+        },
         {
             imageUrl: 'https://th.bing.com/th/id/OIP.72cktuehSngJboCjBkOXewHaE8?rs=1&pid=ImgDetMain',
-            id : 1,
+            id : 9,
             title : 'Système d\'exploitation',
             content : `Introduction
 Un système d’exploitation (OS) est un ensemble de programmes qui gère les ressources matérielles et logicielles d’un ordinateur. Il sert d’intermédiaire entre l’utilisateur et le matériel informatique, facilitant l’exécution des applications et la gestion des périphériques.
@@ -36,12 +100,12 @@ iOS est le système d’exploitation mobile développé par Apple pour ses appar
 
 Conclusion
 Chaque système d’exploitation a ses propres avantages et inconvénients, et le choix d’un OS dépend souvent des besoins spécifiques de l’utilisateur. Que ce soit pour un usage personnel, professionnel, ou pour le développement, il existe un système d’exploitation adapté à chaque situation.`,
-            author : 'Ing Bentz',
+            author : 'IA',
             publishedAt : new Date()
         },
         {
             imageUrl : 'https://th.bing.com/th/id/OIP.EqNo_Xwatr-16VSx7iOlcQAAAA?rs=1&pid=ImgDetMain',
-            id : 2,
+            id : 10,
             title : 'Intelligence Artificielle ',
             content : `L’intelligence artificielle (IA) est un domaine fascinant de l’informatique qui vise à créer des machines capables de simuler l’intelligence humaine. Voici un aperçu détaillé :
 
@@ -68,23 +132,12 @@ Sécurité et confidentialité : La collecte et l’utilisation des données per
 Impact sur l’emploi : L’automatisation pourrait remplacer certains emplois, nécessitant une adaptation des compétences et des politiques de travail5.
 Conclusion
 L’intelligence artificielle a le potentiel de transformer de nombreux aspects de notre vie quotidienne et de notre société. Cependant, il est crucial de développer et d’utiliser ces technologies de manière éthique et responsable pour maximiser leurs bénéfices tout en minimisant les risques.`,
-            author : 'Ing Blessed',
+            author : 'IA',
             publishedAt : new Date()
         },
-        {
-            imageUrl : 'https://i.blogs.es/b45de5/2/1024_2000.jpg',
-            id: 3,
-            title : 'Innovations Technologiques',
-            content : `Récemment, le CES 2024 à Las Vegas a présenté plusieurs innovations technologiques impressionnantes. Voici quelques-unes des plus marquantes :
-
-Télévisions transparentes : LG a dévoilé un téléviseur OLED transparent de 77 pouces, offrant une expérience visuelle unique en se fondant dans le décor lorsqu’il est éteint1.
-Poussette intelligente : La start-up canadienne Glüxkind a présenté “Ella”, une poussette connectée et intelligente, qui pourrait révolutionner la vie des parents1.
-Appareil de télémédecine : Withings a lancé BeamO, un appareil 4-en-1 (thermomètre, électrocardiogramme, stéthoscope, oxymètre) destiné à améliorer les téléconsultations médicales1.
-Ces innovations montrent à quel point la technologie continue de progresser rapidement et d’influencer divers aspects de notre vie quotidienne.`,
-            author : 'Copilot',
-            publishedAt : new Date()
-        }
-    ]
+    ];
+    
+ 
 
 
     getAllPublications(): Publication[]{

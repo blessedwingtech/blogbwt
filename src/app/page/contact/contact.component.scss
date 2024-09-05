@@ -1,4 +1,30 @@
 /*Partie contact, beginning*/
+.banner h1{
+    background-color: orange; //rgba(rgb(3, 53, 82), $alpha: 1);
+    color: #fff;
+    text-align: center;
+    margin-top: 80px;
+    padding: 20px;
+}
+
+.banner:hover{
+    width: 100%;
+	height: 260px;
+	background-image: linear-gradient(40deg, rgba(3, 53, 82, 0.7), rgba(0, 0, 0, 0.7)), url('https://media.istockphoto.com/id/1456828293/photo/diverse-business-people-talking-in-a-meeting-business-team-having-a-discussion-in-a-boardroom.webp?b=1&s=170667a&w=0&k=20&c=GzAbK1YyZg03azvFLNTOWC-ziAfVCPaW2TV2FpGhTGI=');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-top: 10px;
+	margin-bottom: 100px;
+	padding-top: 100px;
+    transition: all 1s ease-in-out;
+    z-index: 100;
+}
+.banner p{
+    text-align: center;
+    color: gray;
+    margin: 20px;
+}
 .contain{
 	margin-top: 100px;
 	padding: 10px;
@@ -9,8 +35,7 @@
 }
 .container{
 	box-shadow: 0 0 5px rgba(1, 1, 37, 0.61);
-	border-radius: 10px;
-	padding: 10px;
+	border-radius: 10px; 
 	margin-bottom: 10px;
 }
 /* .contact{
@@ -41,9 +66,10 @@
 .contact .find .si{
 	text-align: center;
 	margin: 4px;
-	padding: 0 25px;
+	padding: 0 85px;
 	color: rgb(3, 53, 82);
 	font-weight: bold;
+	border-bottom: solid 2px gray;
 }
 .contain .findme p{
 	text-align: center;
@@ -56,7 +82,7 @@
     justify-content: space-between;
 	margin: 15px auto;
     padding: 10px;
-	box-shadow: 0 0 5px rgba(255, 166, 0, 0.596) !important;  
+	box-shadow: 0 0 15px rgba(41, 41, 40, 0.396) !important;  
 }
 .contain #entre .findme div p{
 	margin: 3px;
@@ -82,8 +108,9 @@
 	padding: 10px;
 }
 .contact form{
-	width: 60%; 
+	width: 55%; 
 	margin: 0px;
+	padding: 80px;
 	box-shadow: 0 0 5px rgb(5, 27, 49);
 }
  

@@ -4,7 +4,7 @@
     box-sizing: content-box;
 }
 .banner h1{
-    background-color: gold; //rgba(rgb(3, 53, 82), $alpha: 1);
+    background-color: orange; //rgba(rgb(3, 53, 82), $alpha: 1);
     color: #fff;
     text-align: center;
     margin-top: 80px;
@@ -46,6 +46,8 @@
     justify-content: space-between;
     align-items: center; 
     margin: 15px; 
+    box-shadow: -2px 0 15px rgba(0, 0, 39, 0.411);
+    padding: 12px 20px;
 }
 .mini img{ 
     width: 25%;
@@ -94,7 +96,7 @@
         height: fit-content;
         overflow: auto;
         box-shadow: 0 0 18px rgba(94, 93, 93, 0.39);
-        border: solid 3px #fff;
+        border: solid 3px #b1afaf;
         img{
             width: 100%;
             height: auto;

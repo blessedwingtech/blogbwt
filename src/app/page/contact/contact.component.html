@@ -1,8 +1,12 @@
  
+ <div class="banner">
+  <h1>À propos de nous</h1>
+  <p>Flying better to fly higher</p>
+</div>
 <div class="contain">
-  <div class="container mt-5">
-    <h2>Contactez-nous</h2>
-    <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+  <div class="container"> 
+      <h2 class="mb-3 text-center text-light rounded bg-secondary col-12">Contactez-nous</h2>
+    <form class="p-4" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
       <div class="mb-3">
         <label for="name" class="form-label">Nom</label>
         <input type="text" class="form-control" id="name" name="name" ngModel required>
@@ -32,7 +36,7 @@
       <div class="findme">
         <div id="vi">
             <img src="https://img.icons8.com/ios-glyphs/30/000000/home.png" alt="home">
-            <p>#99, Pylone, Mirebalais, Haïti</p>
+            <p>#88, Avenue Toussaint Louverture, Pignon, Nord Haïti</p>
         </div>
         <div id="vi">
             <img src="https://img.icons8.com/ios-glyphs/30/000000/phone.png" alt="call">
@@ -40,11 +44,11 @@
         </div>
         <div id="vi">
             <img src="https://img.icons8.com/ios-glyphs/30/000000/email.png" alt="mail">
-            <p>adess&#64;gmail.com</p>
+            <p>blessedwingtech&#64;gmail.com</p>
         </div>
         <div id="vi">
             <img src="https://img.icons8.com/ios-glyphs/30/000000/internet.png" alt="web">
-            <p>www.adess.org</p>
+            <p>Blessed wing technology</p>
         </div>
       </div>
   
