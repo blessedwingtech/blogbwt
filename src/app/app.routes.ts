@@ -22,6 +22,7 @@ import { GalerieComponent } from './page/galerie/galerie.component';
 import { ConfidentialiteComponent } from './page/confidentialite/confidentialite.component';
 import { InfoComponent } from './page/info/info.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { ServicesComponent } from './page/services/services.component';
 
 
 export const routes: Routes = [
@@ -102,6 +103,10 @@ export const routes: Routes = [
     {
         path: 'gallery',
         component: GalleryComponent
+    },
+    {
+        path: 'services',
+        component: ServicesComponent
     },
      {
         path: 'confidentialite',

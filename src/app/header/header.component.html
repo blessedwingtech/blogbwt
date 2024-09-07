@@ -21,24 +21,30 @@
                   <a (click)="toggleNavbarOnSmallScreens()" class="nav-link active" routerLink="/about" routerLinkActive="active">about</a>
                 </li>
                 <li class="nav-item">
-                  <a (click)="toggleNavbarOnSmallScreens()" class="nav-link active" routerLink="/contact" routerLinkActive="active">Contacts</a>
+                  <a (click)="toggleNavbarOnSmallScreens()" class="nav-link active" routerLink="/contact" routerLinkActive="active">Contact</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item"> 
+                  <a (click)="toggleNavbarOnSmallScreens()" class="nav-link active" routerLink="/services" routerLinkActive="active">Services</a>
+                </li>
+                <li hidden class="nav-item">
                   <a (click)="toggleNavbarOnSmallScreens()" class="nav-link active" routerLink="/login" routerLinkActive="active" *ngIf="!secret()">Sign in</a>
                 </li>
-                <li class="nav-item">
+                <li hidden class="nav-item">
                   <a (click)="toggleNavbarOnSmallScreens()" class="nav-link active" routerLink="/signup" routerLinkActive="active" *ngIf="!secret()">Sign up</a>
                 </li> 
-                <li class="nav-item">
+                <li hidden class="nav-item">
                   <a (click)="toggleNavbarOnSmallScreens()" class="nav-link active" routerLink="/home" routerLinkActive="active" *ngIf="!secret()">Galery</a>
-                </li>
+                </li> 
                 <li class="nav-item">
                   <a (click)="toggleNavbarOnSmallScreens()" class="nav-link active" routerLink="/publication" routerLinkActive="active">Articles</a>
                 </li> 
                
-                <li class="nav-item">
+                <li hidden class="nav-item">
                   <a class="nav-link disabled" href="#">Disabled</a>
                 </li>
+                <li class="nav-item">
+                  <a (click)="toggleNavbarOnSmallScreens()" class="nav-link active" routerLink="/win" routerLinkActive="active">Gagner</a>
+                </li> 
 
                 
                 <li class="dropdown-container mb-3" *ngIf="!secret()"> 

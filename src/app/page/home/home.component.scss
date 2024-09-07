@@ -86,3 +86,48 @@ h1 {
       margin: 10px 5px;
   }
 }
+
+//animation
+@keyframes changeColor {
+  0% {
+    color: rgb(255, 38, 0);
+  }
+  25% {
+    color: rgb(12, 126, 2);
+  }
+  45% {
+    color: rgb(4, 185, 240);
+  }
+  50% {
+    color: rgb(214, 4, 85);
+  }
+  65% {
+    color: rgb(61, 8, 17);
+  }
+  85% {
+    color: rgb(243, 199, 5);
+  }
+  100% {
+    color: blue;
+  }
+}
+
+@keyframes changeSize {
+  0% {
+    font-size: 4.3rem;
+  }
+  50% {
+    font-size: 5.5rem;
+  }
+  65% {
+    font-size: 4.8rem;
+  }
+  100% {
+    font-size: 5rem;
+  }
+}
+
+.animated-text {
+  padding: 100px;
+  animation: changeColor 1s infinite, changeSize 1.2s infinite;
+}

@@ -37,13 +37,26 @@ export class DonationFormComponent {
     console.log('Don soumis avec succès:', this.donation);
     this.emailDonationService.sendEmail(this.donation).then(response => {
       console.log('Email sent successfully to the admin-mail ', response);
+      Swal.fire({
+        icon: 'success',
+        title: 'Succès',
+        text: `Le message de votre Don a été envoyé avec succès!  Nous vous remercions de votre support...  Nous faisons les suivis au plus vite possible grâce à l'Email que vous venez de fournir.`,
+        confirmButtonColor: '#3085d6' 
+      });
+      this.router.navigateByUrl('/services')
     }).catch(error => {
       console.error('Error sending email, le message n\'est pas envoyé', error);
+      Swal.fire({
+        icon: 'error',
+        title: 'Erreur',
+        text: 'Une erreur est produite lors de l\'envoi. SVP, laissez nous un message ici !  Cliquez sur OK',
+        confirmButtonColor: '#d33' 
+    });
     });
     //end of sending email
 
     console.log('Don soumis :', this.donation);
-  this.donationService.sendDonation(this.donation).pipe(
+ /*  this.donationService.sendDonation(this.donation).pipe(
     tap({
       next: (response) => {
         console.log('Donation sent successfully', response);
@@ -65,6 +78,6 @@ export class DonationFormComponent {
       this.router.navigateByUrl('/contact');
       }
     })
-  ).subscribe();
+  ).subscribe(); */
   }
 }

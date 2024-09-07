@@ -1,0 +1,16 @@
+.card {
+    transition: transform 0.2s;
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(5, 0, 31, 0.582);
+    }
+  }
+  
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+  .bg-orange{
+    background-color: orange;
+  }
+  

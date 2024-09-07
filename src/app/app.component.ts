@@ -8,6 +8,7 @@ import { FooterComponent } from "./page/footer/footer.component";
 //import { FirebaseService } from './services/firebase.service';
 import { DonationButtonComponent } from "./page/donation-button/donation-button.component";
 import { DonationButtonService } from './services/donation-button.service';
+import { ScrollService } from './scroll.service';
 
 @Component({
   selector: 'app-root',
@@ -20,7 +21,8 @@ export class AppComponent implements OnInit{
   title = 'stars';
 
   constructor( private router: Router, 
-              private donationButtonService: DonationButtonService
+              private donationButtonService: DonationButtonService,
+              private scrollService: ScrollService
   ){}
 
   ngOnInit(): void {
