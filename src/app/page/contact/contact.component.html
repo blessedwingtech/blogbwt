@@ -10,15 +10,15 @@
         <div class="mb-3">
           <label for="name" class="form-label">Nom</label>
           <input type="text" class="form-control" id="name" name="name" ngModel required>
-          <div *ngIf="name.invalid && (name.dirty || name.touched)" class="text-danger">
-            Nom est requis.
+          <div *ngIf="contactForm.submitted && contactForm.controls['name'].invalid" class="text-danger">
+            Veullez saisir votre nom
           </div>
         </div>
         <div class="mb-3">
           <label for="email" class="form-label">Email</label>
-          <input type="email" class="form-control" id="email" name="email" ngModel required>
-          <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-danger">
-            Email est requis et doit être valide.
+          <input type="email" class="form-control" id="email" name="email" ngModel required email>
+          <div *ngIf="contactForm.submitted && contactForm.controls['email'].invalid" class="text-danger">
+            Un email valide est requis.
           </div>
         </div>
         <div class="mb-3">
@@ -26,15 +26,15 @@
           <select class="form-control" id="country" name="country" ngModel required>
             <option *ngFor="let country of countries" [value]="country">{{ country }}</option>
           </select>
-          <div *ngIf="country.invalid && (country.dirty || country.touched)" class="text-danger">
-            Pays est requis.
+          <div *ngIf="contactForm.submitted && contactForm.controls['country'].invalid" class="text-danger">
+            Veuillez choisir votre pays
           </div>
         </div>
         <div class="mb-3">
           <label for="message" class="form-label">Message</label>
           <textarea class="form-control" id="message" name="message" rows="3" ngModel required></textarea>
-          <div *ngIf="message.invalid && (message.dirty || message.touched)" class="text-danger">
-            Message est requis.
+          <div *ngIf="contactForm.submitted && contactForm.controls['message'].invalid" class="text-danger">
+            SVP ! Entrez le contenu de votre message ici
           </div>
         </div>
         <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
@@ -52,21 +52,16 @@
             <p>#88, Avenue Toussaint Louverture, Pignon, Nord Haïti</p>
         </div>
         <div id="vi">
-          <img width="25px" src="https://cdn-icons-png.flaticon.com/128/5968/5968841.png" alt="whatsapp">
-          <p><a href="https://wa.me/50940576045?text=Bonjour%20je%20souhaite%20plus%20d'informations">Contactez-nousvia whatsapp</a></p>
-        </div>
-        
-        <div id="vi">
             <img src="https://img.icons8.com/ios-glyphs/30/000000/phone.png" alt="call">
-            <p><a href="https://wa.me/50940576045?text=Bonjour%20je%20souhaite%20plus%20d'informations">(+509) 40576045 / 48365101</a></p>
+            <p>(+509) 40576045 / 48365101</p>
         </div>
         <div id="vi">
             <img src="https://img.icons8.com/ios-glyphs/30/000000/email.png" alt="mail">
-            <p><a href="mailto:blessedwingtech@gmail.com">blessedwingtech&#64;gmail.com</a></p>
+            <p>blessedwingtech&#64;gmail.com</p>
         </div>
         <div id="vi">
             <img src="https://img.icons8.com/ios-glyphs/30/000000/internet.png" alt="web">
-            <p><a href="https://blogbwt.vercel.app">Blessed wing technology</a></p>
+            <p>Blessed wing technology</p>
         </div>
       </div>
   

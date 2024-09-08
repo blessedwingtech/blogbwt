@@ -14,11 +14,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
-email: any;
-country: any;
-message: any;
-name: any;
-
   constructor(private emailService: EmailService, 
               private router: Router) {}
 

@@ -1,4 +1,8 @@
 /*Partie contact, beginning*/
+input.ng-invalid.ng-touched, select.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched {
+	border-color: red;
+  }
+  
 .banner h1{
     background-color: orange; //rgba(rgb(3, 53, 82), $alpha: 1);
     color: #fff;
