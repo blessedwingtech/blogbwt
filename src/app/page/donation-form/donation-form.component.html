@@ -6,11 +6,24 @@
       <div class="mb-3">
         <label for="name" class="form-label">Nom</label>
         <input type="text" class="form-control" id="name" required [(ngModel)]="donation.name" name="name" #name="ngModel">
+        <div *ngIf="name.invalid && (name.dirty || name.touched)" class="text-danger">
+          Veuillez entrer votre nom.
+        </div>
       </div>
+      
       <div class="mb-3">
         <label for="email" class="form-label">Email</label>
-        <input type="email" class="form-control" id="email" required [(ngModel)]="donation.email" name="email" #email="ngModel">
+        <input type="email" class="form-control" id="email" required [(ngModel)]="donation.email" name="email" #email="ngModel" email>
+        <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-danger">
+          <div *ngIf="email.errors?.['required']">
+            Vous devez entrer votre email
+          </div>
+          <div *ngIf="email.errors?.['email']">
+            SVP, entrez un email valide
+          </div>
+        </div>
       </div>
+      
       <div class="mb-3">
         <label for="phone" class="form-label">Téléphone</label>
         <input type="tel" class="form-control" id="phone" required [(ngModel)]="donation.phone" name="phone" #phone="ngModel">
@@ -22,9 +35,14 @@
       <div class="mb-3">
         <label for="transferMethod" class="form-label">Moyen de Transfert</label>
         <select class="form-select" id="transferMethod" required [(ngModel)]="donation.transferMethod" name="transferMethod" #transferMethod="ngModel">
+          <option value="" disabled selected>Choisissez un moyen de transfert</option>
           <option *ngFor="let method of transferMethods" [value]="method">{{ method }}</option>
         </select>
+        <div *ngIf="transferMethod.invalid && (transferMethod.dirty || transferMethod.touched)" class="text-danger">
+          Veuillez choisir un moyen de transfert.
+        </div>
       </div>
+      
       <div class="mb-3">
         <label for="message" class="form-label">Message (optionnel)</label>
         <textarea class="form-control" id="message" [(ngModel)]="donation.message" name="message" #message="ngModel"></textarea>

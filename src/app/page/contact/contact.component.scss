@@ -20,6 +20,14 @@
     transition: all 1s ease-in-out;
     z-index: 100;
 }
+a{
+	color: #101010;
+	text-decoration: none;
+	:hover{
+		color: rgb(1, 1, 56);
+	}
+}
+
 .banner p{
     text-align: center;
     color: gray;

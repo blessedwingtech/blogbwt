@@ -19,6 +19,7 @@ import { ScrollService } from './scroll.service';
 })
 export class AppComponent implements OnInit{
   title = 'stars';
+  showDonationButton: boolean = false;
 
   constructor( private router: Router, 
               private donationButtonService: DonationButtonService,
@@ -26,16 +27,27 @@ export class AppComponent implements OnInit{
   ){}
 
   ngOnInit(): void {
-    //this.firebaseServise.getData()
-
-    //to handle button display
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        const alwaysShowRoutes = ['/specific-page1', '/specific-page2']; // Ajoutez ici les routes spécifiques
+        const alwaysShowRoutes = ['/specific-page1', '/specific-page2'];
         if (alwaysShowRoutes.includes(event.urlAfterRedirects)) {
           this.donationButtonService.alwaysShowButton();
+        } else if (event.urlAfterRedirects === '/donation') {
+          this.showDonationButton = false;
+        } else {
+          this.startDonationButtonTimer();
         }
       }
     });
   }
+
+  startDonationButtonTimer(): void {
+    setInterval(() => {
+      this.showDonationButton = true;
+      setTimeout(() => {
+        this.showDonationButton = false;
+      }, 20000); // Hide after 20 seconds
+    }, 30000); // Show every 30 seconds
+  }
 }
+

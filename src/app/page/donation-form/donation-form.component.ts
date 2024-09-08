@@ -30,7 +30,7 @@ export class DonationFormComponent {
 
               
 
-  transferMethods = ['PayPal', 'Carte de Crédit', 'Virement Bancaire','Moncash', 'Natcash'];
+  transferMethods = ['PayPal', 'Carte de débit', 'Virement Bancaire','Moncash', 'Natcash', 'MoneyGram'];
 
   onSubmit() {
     //start to send email
