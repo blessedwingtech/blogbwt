@@ -1,3 +1,29 @@
+.banner h1{
+  background-color: orange; //rgba(rgb(3, 53, 82), $alpha: 1);
+  color: #fff;
+  text-align: center;
+  margin-top: 80px;
+  padding: 20px;
+}
+
+.banner:hover{
+  width: 100%;
+height: 260px;
+background-image: linear-gradient(40deg, rgba(3, 53, 82, 0.7), rgba(39, 24, 1, 0.795)), url('https://th.bing.com/th/id/R.86a931e8ace5f8a60ac375606081e387?rik=SR8J1g5vrsxxCg&riu=http%3a%2f%2fwww.greta-aquitaine.fr%2fuploads%2fFotolia_68964331_L.jpg&ehk=V0vhYQKKAK4%2f4fZiecJ25k1k5BE1llU%2fhqBgvBpAx2s%3d&risl=&pid=ImgRaw&r=0');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+margin-top: 10px;
+margin-bottom: 100px;
+padding-top: 100px;
+  transition: all 1s ease-in-out;
+  z-index: 100;
+}
+.banner p{
+  text-align: center;
+  color: gray;
+  margin: 20px;
+}
 .card {
     transition: transform 0.2s;
     &:hover {

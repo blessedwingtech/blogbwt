@@ -6,7 +6,7 @@ import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 })
 export class EmailDonationService {
   private serviceID = 'service_fr896ec';
-  private templateID = 'template_grvokoj';
+  private templateID = 'template_m90dpib';
   private userID = 'I_P0-z1XixLDI5ODT';
   //return emailjs.send('service_fr896ec', 'template_grvokoj', templateParams, 'I_P0-z1XixLDI5ODT');
   constructor() {

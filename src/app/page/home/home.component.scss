@@ -112,7 +112,7 @@ h1 {
   }
 }
 
-@keyframes changeSize {
+/* @keyframes changeSize {
   0% {
     font-size: 4.3rem;
   }
@@ -125,9 +125,8 @@ h1 {
   100% {
     font-size: 5rem;
   }
-}
+} */
 
-.animated-text {
-  padding: 100px;
+.animated-text { 
   animation: changeColor 1s infinite, changeSize 1.2s infinite;
 }
