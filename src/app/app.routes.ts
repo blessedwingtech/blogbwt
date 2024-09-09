@@ -23,6 +23,7 @@ import { ConfidentialiteComponent } from './page/confidentialite/confidentialite
 import { InfoComponent } from './page/info/info.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ServicesComponent } from './page/services/services.component';
+import { AdsTxtComponent } from './ads.txt/ads.txt.component';
 
 
 export const routes: Routes = [
@@ -139,11 +140,7 @@ export const routes: Routes = [
         component: LayoutComponent,
         canActivate: [AuthGuard]
     }, */ 
-    {
-        path: 'publication',
-        component: PublicationComponent
-    },
-    {
-        path: '**', redirectTo: 'home', pathMatch: 'full'
-    },
+    { path: 'publication', component: PublicationComponent },
+  { path: 'ads.txt', component: AdsTxtComponent }, // Ajoutez cette ligne
+  { path: '**', redirectTo: 'home', pathMatch: 'full' }
 ];
