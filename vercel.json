@@ -5,6 +5,12 @@
         "destination": "/ads.txt",
         "permanent": true
       }
+    ],
+    "rewrites": [
+      {
+        "source": "/ads.txt",
+        "destination": "/ads.txt"
+      }
     ]
   }
   
