@@ -305,6 +305,10 @@ button {
 
   //=================
   @media screen and (max-width:800px) {
+    .wing{
+        display: none;
+        width: 1px;
+    }
     .he{
         background-color: rgba(4, 63, 102, 0.068);
         box-shadow: 0 0 25px rgba(12, 12, 12, 0.282);
