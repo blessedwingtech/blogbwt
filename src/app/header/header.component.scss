@@ -3,13 +3,66 @@
 }
 
 #men {
-    position: absolute; // Position the dropdown menu absolutely
-    top: 100%; // Align the top of the menu with the bottom of the button
-    left: 0; // Align the left side of the menu with the left side of the button
-    margin-top: 0; // Remove any margin that might push the menu down
-    z-index: 1000; // Ensure the dropdown appears above other elements
-}
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    }
 
+//actualités reseaux sociaux
+.social-links {
+    width: 250px; 
+    box-shadow: 0 0 20px rgba(87, 86, 86, 0.418);
+    display: flex;
+    flex-direction: column; // Organise les éléments en colonne
+    align-items: flex-start; // Aligne les éléments au début de la colonne
+    transition: all 1s ease;
+   
+  
+    .social-link {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-decoration: none;
+      margin: 5px 0;
+    }
+  
+    .social-icon {
+        position: static;
+      width: 24px;
+      height: auto;
+      margin-right: 8px; // Ajustez la marge selon vos besoins
+      display: inline-block;
+      vertical-align: middle;
+    }
+  
+    .social-link span {
+      width: fit-content;
+      text-transform: lowercase;
+      vertical-align: middle;
+      font-size: small;
+      color: #000; // Ajustez la couleur selon vos besoins
+    }
+  
+    .ml-2 {
+      margin-left: 8px; // Adjust the margin as needed
+    }
+  
+    .d-flex {
+      display: flex;
+      align-items: center;
+    }
+  
+    .align-items-center {
+      align-items: center;
+    }
+  }
+  
+  
+  
+  
+
+       
 .wing{
     position: fixed;
     top: 30px;
@@ -36,7 +89,8 @@
   @media (min-width: 768px) {
     .navbar-reduced {
       width: 50%;
-    }
+    } 
+    
   }
   
 #logos{
@@ -146,25 +200,27 @@ a:hover{
 .bg-prim{
     background-color: rgb(2, 60, 94);
 }
-button {
-    background-color: transparent;
+button { 
+    background-color: orange;
     box-sizing: border-box;
     padding: 5px 10px;
-    border: none;
-    box-shadow: lightgray 3px 3px 7px;
+    border: none; 
     margin-right: 40px;
-    outline: none;
-    font-size: 17px;
-    font-weight: 500;
+    outline: none; 
     transition: all 1s ease;
+    margin-bottom: -10px;
     &:active {
       transform: translate(1px, 1px);
-      box-shadow: lightgray 0 0 5px;
+      box-shadow: rgba(233, 105, 1, 0.603) 0 0 5px;
     }
   }
 
 
     @media screen and (max-width:860px){
+    button{
+        z-index: 700;
+    }
+        
     .nav{
         min-height: 100px;
         position: fixed;  

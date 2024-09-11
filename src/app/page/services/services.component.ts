@@ -24,13 +24,18 @@ export class ServicesComponent {
       image: 'https://images.pexels.com/photos/5475763/pexels-photo-5475763.jpeg?auto=compress&cs=tinysrgb&w=600',
     },
     {
+      title: 'Marketing Digital',
+      description: 'Faire la promotion pour votre marque, vos produits, vos serveces, votre entreprise... sur l\'internet, à travers les réseaux sociaux, des plateforme en ligne... et couvrir le grand public',
+      image: 'https://images.pexels.com/photos/3194518/pexels-photo-3194518.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    },
+    {
       title: 'Développement d\'Applications',
       description: 'Création d\'applications mobiles et web performantes.',
       image: 'https://media.istockphoto.com/id/1075599562/photo/programmer-working-with-program-code.jpg?s=1024x1024&w=is&k=20&c=R9Be5UlsTmSki_Bqxqedt-65U_mNMsVQzOpECKvawDs=',
     },
     {
       title: 'Cours en Ligne',
-      description: 'Formation en ligne sur divers sujets informatiques.',
+      description: 'Formation en ligne sur divers sujets informatiques tels que la création de site web, la programmation, l\'infographie et autres.',
       image: 'https://images.pexels.com/photos/6517274/pexels-photo-6517274.jpeg?auto=compress&cs=tinysrgb&w=600',
     },
     {

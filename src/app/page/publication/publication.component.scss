@@ -1,92 +1,99 @@
-
-.pubox{
-     display: flex;
+.pubox {
+    display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     padding-top: 120px;
     min-height: 60vh;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.516);
-}
-.onepub{
+  }
+  
+  .onepub {
     width: 95%;
-    display:  flex;
+    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 8px rgba(68, 66, 66, 0.493);
     padding: 10px;
     margin: 5px;
-    border: solid 1px rgba(0, 0, 46, 0.74); 
-}
- 
-.pubox .onepub .image{
+    border: solid 1px rgba(0, 0, 46, 0.74);
+    transition: all 0.3s ease;
+  }
+  
+  .pubox .onepub .image {
     width: 30%;
     height: auto;
     overflow: hidden;
     clip-path: circle(50% at 0 0);
     box-shadow: 0 0 13px orange;
     transition: all 1s ease;
-}
-.pub{
+  }
+  
+  .pub {
     width: 65%;
-}
-.pubox .onepub .image:hover{ 
+  }
+  
+  .pubox .onepub .image:hover {
     clip-path: circle(100%);
-}
-.pubox .onepub .image img{
-    width: 100%; 
+  }
+  
+  .pubox .onepub .image img {
+    width: 100%;
     height: 100%;
     display: block;
     margin: auto;
-}
-h3{
+  }
+  
+  h3 {
     font-size: 5rem;
     color: rgba(255, 255, 255, 0.781);
     text-shadow: 0 0 5px rgba(0, 0, 49, 0.432);
     text-align: center;
-}
-.pubox .onepub .image h4{
+  }
+  
+  .pubox .onepub .image h4 {
     background-color: orange;
     color: rgb(1, 1, 51);
     text-align: center;
-    padding: 15px; 
-}
-.pubox .onepub .image p{
+    padding: 15px;
+  }
+  
+  .pubox .onepub .image p {
     box-shadow: 0 0 5px rgba(56, 56, 56, 0.61);
     max-height: 100px;
     background-color: rgba(5, 199, 134, 0.356);
     overflow: hidden;
     text-align: justify;
-}
-
-//Media screen
-@media screen and (max-width:900px) {
-    .plus{
-        margin-top: 100px;
+  }
+  
+  // Media Queries
+  @media screen and (max-width: 900px) {
+    .plus {
+      margin-top: 100px;
     }
-    .onepub{
-        flex-direction: column;
+    .onepub {
+      flex-direction: column;
     }
-    .image{
-        width: 100% !important;
+    .image {
+      width: 100% !important;
     }
-    .image,img{
-        width: 95%;
+    .image, img {
+      width: 95%;
     }
-    .onepub .pub{
-        display: flex;
-        flex-direction: column;
-        justify-content: start; 
-        align-items: center;
-        width: 100% !important;
-        text-align: justify;
-        p{
-            margin: 0;
-        }
-        small,strong{
-            margin: 0; 
-        }
-        
+    .onepub .pub {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+      width: 100% !important;
+      text-align: justify;
+      p {
+        margin: 0;
+      }
+      small, strong {
+        margin: 0;
+      }
     }
-}
+  }
+  
