@@ -10,12 +10,22 @@
     z-index: 1000; // Ensure the dropdown appears above other elements
 }
 
- 
-
-
+.wing{
+    position: fixed;
+    top: 30px;
+    right: 100px;
+    width: 100px;
+    height: auto;
+    z-index: 100;
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
 .navbar-reduced { 
-    background-color: rgba(8, 28, 58, 0.767) !important;
+    background-color: rgba(2, 38, 54, 0.788) !important;
     width: 50%;
+    box-shadow: 0 0 20px rgba(26, 26, 29, 0.884);
     transition: width 1.5s ease;
     #navbarNav{
         float: left;
@@ -65,6 +75,24 @@ ul{
     flex-direction: row;
     justify-content: space-between;
     align-items: center; 
+    .logo{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        p{
+            color: #ffffffe3;
+            position: fixed;
+            top: 140px;
+            left: 30px;
+            text-shadow: 0 0 18px rgba(14, 13, 15, 0.685);
+        }
+        img{
+            position: fixed;
+            top: 20px;
+            left: 25px;
+        }
+    }
 }
 .he:hover{
     transition: 2s ease-in-out;
@@ -116,7 +144,7 @@ a:hover{
     font-weight: bold;
 }
 .bg-prim{
-    background-color: rgb(3, 53, 82);
+    background-color: rgb(2, 60, 94);
 }
 button {
     background-color: transparent;
@@ -166,7 +194,7 @@ button {
         width: 4%;   
     }
     img{
-        width: 25%;
+        width: 20%;
         opacity: .4;
     }
    
@@ -192,7 +220,7 @@ button {
   } */
   label:has(input:checked){ 
     .nav{ 
-        background-color: rgba(255, 166, 0, 0.808);
+        //background-color: rgba(255, 166, 0, 0.808);
         width: fit-content;
         display: flex;
         flex-direction: column;
@@ -200,7 +228,7 @@ button {
         position: fixed;
         top: 10%;
         right: 0;
-        box-shadow: 0 0 9px rgba(36, 35, 35, 0.911);
+        box-shadow: 0 0 19px rgba(36, 35, 35, 0.26);
         z-index: 50;
     } 
     .nav li{
@@ -222,8 +250,8 @@ button {
   //=================
   @media screen and (max-width:800px) {
     .he{
-        background-color: rgba(255, 166, 0, 0.384);
-        box-shadow: 0 0 15px rgba(12, 12, 12, 0.582);
+        background-color: rgba(4, 63, 102, 0.068);
+        box-shadow: 0 0 25px rgba(12, 12, 12, 0.282);
     }
     #navbarNav{
         padding-left: 50px;
