@@ -96,7 +96,8 @@
                 "glob": "**/*",
                 "input": "public",
                 "output": "/assets"
-              }
+              },
+              "src/favicon.ico"
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
