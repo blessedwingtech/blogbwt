@@ -13,3 +13,54 @@
     }
   }
   
+
+  /* other options for supports */
+  .support-us {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+  
+    p {
+      text-align: center;
+      color: #666;
+    }
+  
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+  
+      th, td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: center;
+      }
+  
+      th {
+        background-color: #f4f4f4;
+        color: #333;
+      }
+  
+      td {
+        background-color: #fff;
+      }
+    }
+  
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+  
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  }
+  

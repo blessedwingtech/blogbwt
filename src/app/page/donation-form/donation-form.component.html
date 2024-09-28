@@ -5,7 +5,7 @@
     <form (ngSubmit)="onSubmit()" #donationForm="ngForm">
       <div class="mb-3">
         <label for="name" class="form-label">Nom</label>
-        <input type="text" class="form-control" id="name" required [(ngModel)]="donation.name" name="name" #name="ngModel">
+        <input placeholder="Nom complet" type="text" class="form-control" id="name" required [(ngModel)]="donation.name" name="name" #name="ngModel">
         <div *ngIf="name.invalid && (name.dirty || name.touched)" class="text-danger">
           Veuillez entrer votre nom.
         </div>
@@ -13,7 +13,7 @@
       
       <div class="mb-3">
         <label for="email" class="form-label">Email</label>
-        <input type="email" class="form-control" id="email" required [(ngModel)]="donation.email" name="email" #email="ngModel" email>
+        <input placeholder="example@gmail.com" type="email" class="form-control" id="email" required [(ngModel)]="donation.email" name="email" #email="ngModel" email>
         <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-danger">
           <div *ngIf="email.errors?.['required']">
             Vous devez entrer votre email
@@ -26,16 +26,16 @@
       
       <div class="mb-3">
         <label for="phone" class="form-label">Téléphone</label>
-        <input type="tel" class="form-control" id="phone" required [(ngModel)]="donation.phone" name="phone" #phone="ngModel">
+        <input placeholder="01234567" type="tel" class="form-control" id="phone" required [(ngModel)]="donation.phone" name="phone" #phone="ngModel">
       </div>
       <div class="mb-3">
-        <label for="amount" class="form-label">Montant</label>
-        <input type="number" class="form-control" id="amount" required [(ngModel)]="donation.amount" name="amount" #amount="ngModel">
+        <label for="amount" class="form-label">Montant (USD - HTG - EUR - ...)</label>
+        <input placeholder="1000" type="number" class="form-control" id="amount" required [(ngModel)]="donation.amount" name="amount" #amount="ngModel">
       </div>
       <div class="mb-3">
         <label for="transferMethod" class="form-label">Moyen de Transfert</label>
         <select class="form-select" id="transferMethod" required [(ngModel)]="donation.transferMethod" name="transferMethod" #transferMethod="ngModel">
-          <option value="" disabled selected>Choisissez un moyen de transfert</option>
+          <option style="color: rgb(90, 90, 90);" value="" disabled selected>Choisissez un moyen de transfert</option>
           <option *ngFor="let method of transferMethods" [value]="method">{{ method }}</option>
         </select>
         <div *ngIf="transferMethod.invalid && (transferMethod.dirty || transferMethod.touched)" class="text-danger">
@@ -44,11 +44,88 @@
       </div>
       
       <div class="mb-3">
-        <label for="message" class="form-label">Message (optionnel)</label>
-        <textarea class="form-control" id="message" [(ngModel)]="donation.message" name="message" #message="ngModel"></textarea>
+        <label for="message" class="form-label">Message</label>
+        <textarea placeholder="Votre message ici" class="form-control" id="message" [(ngModel)]="donation.message" name="message" #message="ngModel"></textarea>
       </div>
       <button type="submit" class="btn btn-primary col-12" [disabled]="!donationForm.form.valid">Envoyer</button>
     </form>
   </div>
   
+</div>
+
+<!-- other options for support -->
+<div class="support-us">
+  <h1>Support Us</h1>
+  <p>Your support helps us keep the project running and improve it continuously. You can support us through the following platforms:</p>
+  
+  <div class="table-responsive">
+    <table class="table table-striped table-bordered table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th>Platform</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>PayPal</td>
+          <td>
+            <p>Click the button below to support us via PayPal:</p>
+            <a href="https://www.paypal.com/donate?hosted_button_id=YOUR_PAYPAL_BUTTON_ID" target="_blank">
+              <button class="btn btn-info">Donate with PayPal</button>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>Sogebank</td>
+          <td>
+            <p>Support us through Sogebank by transferring to the following account:</p>
+            <p>Account Name: bentz789</p>
+            <p>Account Number: 4311109716</p>
+          </td>
+        </tr>
+        <tr>
+          <td>MonCash</td>
+          <td>
+            <p><strong>Send Moncash to the following number:</strong></p>
+            <p>(+509) 48365101</p>
+          </td>
+        </tr>
+        <tr>
+          <td>NatCash</td>
+          <td>
+            <p><strong>Send Natcahs to the following number:</strong></p>
+            <p>(+509) 55351587</p>
+          </td>
+        </tr>
+        <tr>
+          <td>Patreon</td>
+          <td>
+            <p>Support us on Patreon:</p>
+            <a href="https://www.patreon.com/blessedwingtech" target="_blank">
+              <button class="btn btn-primary">Support on Patreon</button>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>Buy Me a Coffee</td>
+          <td>
+            <p>Support us on Buy Me a Coffee:</p>
+            <a href="https://www.buymeacoffee.com/blessedwingtech" target="_blank">
+              <button class="btn btn-primary">Buy Me a Coffee</button>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>Ko-fi</td>
+          <td>
+            <p>Support us on Ko-fi:</p>
+            <a href="https://ko-fi.com/blessedky" target="_blank">
+              <button class="btn btn-primary">Support on Ko-fi</button>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
